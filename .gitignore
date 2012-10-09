@@ -15,4 +15,5 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.auxlock
+*.bak
 cv-blx.bib
