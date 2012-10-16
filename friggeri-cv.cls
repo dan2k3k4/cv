@@ -3,10 +3,10 @@
 
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
-  \PassOptionsToClass{\CurrentOption}{article}%
+  \PassOptionsToClass{\CurrentOption}[a4paper]{article}%
 }
 \ProcessOptions\relax
-\LoadClass{article}
+\LoadClass[a4paper]{article}
 
 
 %%%%%%%%%%
@@ -82,8 +82,7 @@
       \thinfont #3%
     };
   \end{tikzpicture}
-  \vspace{2.5cm}
-  \vspace{-2\parskip}
+  \vspace{2cm}
 }
 
 
@@ -138,11 +137,11 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  \footnotesize{#1}&\parbox[t]{12.7cm}{%
+  \footnotesize{#1}&\parbox[t]{11cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    #4\vspace{1.25\parsep}%
   }\\}
 
 
